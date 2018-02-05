@@ -1,6 +1,5 @@
 package main.java.by.tc.task02.main;
 
-import main.java.by.tc.task02.entity.Purchaser;
 import main.java.by.tc.task02.entity.RentUnit;
 import main.java.by.tc.task02.entity.Shop;
 import main.java.by.tc.task02.entity.SportEquipment;
@@ -17,7 +16,6 @@ public class Main {
 
      Shop shop;
      RentUnit rentUnit;
-     Purchaser purchaser;
      List<SportEquipment> goods;
      RentCategory rentCategory;
 

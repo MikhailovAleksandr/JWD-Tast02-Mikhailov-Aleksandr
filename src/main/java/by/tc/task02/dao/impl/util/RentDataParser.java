@@ -20,12 +20,6 @@ public class RentDataParser {
 
     public static SportEquipment parse(String rentUnitData){
 
-        Category category;
-
-        String title;
-
-        int price;
-
         String dataPart;
 
         List<String> unitData = new ArrayList<>();
@@ -37,14 +31,7 @@ public class RentDataParser {
             unitData.add(dataPart.split("[=]")[1]);
         }
 
-        category = Category.valueOf(unitData.get(0).toUpperCase());
-
-        title = unitData.get(1);
-
-        price = Integer.parseInt(unitData.get(2));
-
-        SportEquipment unit = new SportEquipment(category, title, price);
-
+        SportEquipment unit = SportEquipmentCreator.create(unitData);
 
         return unit;
     }
