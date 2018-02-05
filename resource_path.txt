@@ -1,0 +1,2 @@
+shop=src/main/resources/sport_equipment_db.txt
+rent=src/main/resources/rented_sport_equipment_db.txt
