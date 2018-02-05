@@ -1,0 +1,7 @@
+Category=TENNIS, title=net, price=50;
+Category=WINTER, title=skiing, price=150;
+Category=FOOTBALL, title=net, price=60;
+Category=HOCKEY, title=hockey puck, price=110;
+Category=HOCKEY, title=hockey stick, price=110;
+Category=TENNIS, title=net, price=50;
+Category=TENNIS, title=net, price=50;
