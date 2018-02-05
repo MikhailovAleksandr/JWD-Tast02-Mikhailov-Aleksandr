@@ -9,10 +9,11 @@ import main.java.by.tc.task02.service.RentService;
 import main.java.by.tc.task02.service.ServiceFactory;
 import main.java.by.tc.task02.service.ShopService;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Main {
- public static void main(String[] args){
+ public static void main(String[] args) throws IOException{
 
      Shop shop;
      RentUnit rentUnit;

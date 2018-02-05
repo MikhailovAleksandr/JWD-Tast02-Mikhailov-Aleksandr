@@ -30,7 +30,7 @@ public class ShopDAOImpl implements ShopDAO {
     }
 
     @Override
-    public Shop readFile() {
+    public Shop readFile() throws IOException {
 
         String shopData;
 
@@ -52,12 +52,13 @@ public class ShopDAOImpl implements ShopDAO {
 
         }catch (java.io.IOException e) {
             e.getMessage();
+            throw e;
         }
         return shop;
     }
 
     @Override
-    public void writeInFile(Shop shop) {
+    public void writeInFile(Shop shop) throws IOException {
 
         BufferedWriter writer = null;
 
@@ -75,6 +76,7 @@ public class ShopDAOImpl implements ShopDAO {
             writer.close();
         } catch (IOException e) {
             e.getMessage();
+            throw e;
         }
 
 

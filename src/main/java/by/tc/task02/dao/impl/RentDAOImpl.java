@@ -24,7 +24,7 @@ public class RentDAOImpl implements RentDAO {
     }
 
     @Override
-    public RentUnit readFile() {
+    public RentUnit readFile() throws IOException {
 
         String rentUnitData;
 
@@ -46,6 +46,7 @@ public class RentDAOImpl implements RentDAO {
 
         }catch (java.io.IOException e) {
             e.getMessage();
+            throw e;
         }
         return rentUnit;
     }
@@ -54,7 +55,7 @@ public class RentDAOImpl implements RentDAO {
 
 
     @Override
-    public void writeInFile(RentUnit rentUnit) {
+    public void writeInFile(RentUnit rentUnit) throws IOException {
 
         BufferedWriter writer = null;
 
@@ -75,6 +76,7 @@ public class RentDAOImpl implements RentDAO {
 
         } catch (IOException e) {
             e.getMessage();
+            throw e;
         }
 
     }

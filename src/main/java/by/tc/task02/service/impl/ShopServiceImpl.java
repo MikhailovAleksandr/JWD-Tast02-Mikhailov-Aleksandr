@@ -8,6 +8,7 @@ import main.java.by.tc.task02.entity.category.RentCategory;
 import main.java.by.tc.task02.service.ShopService;
 import main.java.by.tc.task02.service.impl.util.ShopAndCategoryComparator;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -45,14 +46,14 @@ public class ShopServiceImpl implements ShopService {
         return units;
     }
 
-    public Shop readFile(){
+
+    public Shop readFile() throws IOException{
 
         Shop shop = shopDAO.readFile();
-
         return shop;
     }
 
-    public void writeInFile(Shop shop){
+    public void writeInFile(Shop shop) throws IOException{
 
         shopDAO.writeInFile(shop);
     }

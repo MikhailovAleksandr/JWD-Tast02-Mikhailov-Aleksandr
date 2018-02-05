@@ -7,6 +7,7 @@ import main.java.by.tc.task02.entity.RentUnit;
 import main.java.by.tc.task02.entity.SportEquipment;
 import main.java.by.tc.task02.service.RentService;
 
+import java.io.IOException;
 import java.util.List;
 
 public class RentServiceImpl implements RentService {
@@ -23,7 +24,7 @@ public class RentServiceImpl implements RentService {
         }
     }
 
-    public RentUnit readFile(){
+    public RentUnit readFile() throws IOException {
 
         RentUnit rentUnit;
 
@@ -32,7 +33,7 @@ public class RentServiceImpl implements RentService {
         return rentUnit;
     }
 
-    public void writeInFile(RentUnit rentUnit){
+    public void writeInFile(RentUnit rentUnit) throws IOException{
 
         rentDAO.writeInFile(rentUnit);
     }
