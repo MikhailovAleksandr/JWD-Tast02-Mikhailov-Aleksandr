@@ -5,3 +5,5 @@ Category=HOCKEY, title=hockey puck, price=110;
 Category=HOCKEY, title=hockey stick, price=110;
 Category=TENNIS, title=net, price=50;
 Category=TENNIS, title=net, price=50;
+Category=TENNIS, title=net, price=50;
+Category=TENNIS, title=net, price=50;

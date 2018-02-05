@@ -51,7 +51,7 @@ public class ShopDAOImpl implements ShopDAO {
             reader.close();
 
         }catch (java.io.IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
         return shop;
     }
@@ -74,7 +74,7 @@ public class ShopDAOImpl implements ShopDAO {
 
             writer.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
 
 

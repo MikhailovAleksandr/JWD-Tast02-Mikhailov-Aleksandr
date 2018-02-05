@@ -45,10 +45,13 @@ public class RentDAOImpl implements RentDAO {
             reader.close();
 
         }catch (java.io.IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
         return rentUnit;
     }
+
+
+
 
     @Override
     public void writeInFile(RentUnit rentUnit) {
@@ -71,7 +74,7 @@ public class RentDAOImpl implements RentDAO {
             writer.close();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
 
     }

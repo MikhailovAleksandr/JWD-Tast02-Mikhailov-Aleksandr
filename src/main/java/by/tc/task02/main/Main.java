@@ -19,9 +19,13 @@ public class Main {
      List<SportEquipment> goods;
      RentCategory rentCategory;
 
+     PrintInfo printer = PrintInfo.getInstance();
+
      ServiceFactory serviceFactory = ServiceFactory.getInstance();
      ShopService shopService = (ShopService) serviceFactory.getService("Shop");
      RentService rentService = (RentService) serviceFactory.getService("Rent");
+
+
 
      shop = shopService.readFile();
      rentUnit = rentService.readFile();
@@ -31,6 +35,8 @@ public class Main {
      goods = shopService.rent(shop,rentCategory);
      rentService.addRent(rentUnit,goods);
 
+     printer.print(shop);
+     printer.print(rentUnit);
 
      shopService.writeInFile(shop);
      rentService.writeInFile(rentUnit);

@@ -22,7 +22,7 @@ public class SportEquipmentPath {
 
         try {
 
-            String resoursePathInfo;
+            String resourcePathInfo;
 
             String filePurpose;
 
@@ -32,13 +32,13 @@ public class SportEquipmentPath {
 
             BufferedReader buffer = new BufferedReader(new InputStreamReader(fstream));
 
-            while((resoursePathInfo = buffer.readLine()) != null){
+            while((resourcePathInfo = buffer.readLine()) != null){
 
-                filePurpose = resoursePathInfo.split("[=]")[0].toLowerCase();
+                filePurpose = resourcePathInfo.split("[=]")[0].toLowerCase();
 
                 if(purposeName.toLowerCase().equals(filePurpose.toLowerCase())){
 
-                    path = resoursePathInfo.split("[=]")[1].toLowerCase();
+                    path = resourcePathInfo.split("[=]")[1].toLowerCase();
 
                     return path;
                 }
@@ -48,6 +48,7 @@ public class SportEquipmentPath {
         }
 
         catch(Exception ex){
+            ex.getMessage();
             return null;
         }
     }
